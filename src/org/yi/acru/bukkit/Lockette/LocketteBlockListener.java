@@ -467,7 +467,7 @@ public class LocketteBlockListener implements Listener {
 
 			if (plugin.hasPermission(block.getWorld(), player, "lockette.create.all"))
 				create = true;
-			else if (type == Material.CHEST.getId()) {
+			else if (type == Material.CHEST.getId() || type == Material.TRAPPED_CHEST.getId()) {
 				if (plugin.hasPermission(block.getWorld(), player, "lockette.user.create.chest"))
 					create = true;
 			} else if ((type == Material.FURNACE.getId()) || (type == Material.BURNING_FURNACE.getId())) {
